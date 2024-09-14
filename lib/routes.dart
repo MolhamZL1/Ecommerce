@@ -12,6 +12,7 @@ import 'package:ecommerce/view/screen/on_boarding_view.dart';
 import 'package:get/get.dart';
 
 List<GetPage<dynamic>>? routes = [
+  GetPage(name: "/", page: () => const ChooseLanguageVieew()),
   GetPage(name: AppRoutes.login, page: () => const LoginView()),
   GetPage(name: AppRoutes.signUp, page: () => const SignUpView()),
   GetPage(
@@ -30,7 +31,4 @@ List<GetPage<dynamic>>? routes = [
   GetPage(
       name: AppRoutes.verifycodeEmail, page: () => const Verifycodeemailview()),
   GetPage(name: AppRoutes.onBoardingView, page: () => const OnBoardingView()),
-  GetPage(
-      name: AppRoutes.chooseLanguageVieew,
-      page: () => const ChooseLanguageVieew()),
 ];

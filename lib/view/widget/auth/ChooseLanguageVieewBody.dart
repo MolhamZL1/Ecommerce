@@ -28,7 +28,7 @@ class ChooseLanguageVieewBody extends GetView<LocaleController> {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             ChooseLanguageItem(
-              text: TitlesLanguage.english.tr,
+              text: "English",
               image: AppImageAsset.usaFlag,
               onTap: () {
                 controller.changeLanguage(MyTranslation.english);
@@ -36,7 +36,7 @@ class ChooseLanguageVieewBody extends GetView<LocaleController> {
               },
             ),
             ChooseLanguageItem(
-              text: TitlesLanguage.arabic.tr,
+              text: "العربية",
               image: AppImageAsset.ksaFlag,
               onTap: () {
                 controller.changeLanguage(MyTranslation.arabic);

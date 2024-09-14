@@ -43,7 +43,9 @@ class ResetPasswordViewBody extends GetView<ResetpasswordcontrollerImp> {
                 validInput(val!, 8, 50, "password");
                 if (controller.password != controller.repassword) {
                   return "Password Not the same";
-                } else {}
+                } else {
+                  return "";
+                }
               },
               controller: controller.repassword,
               iconData: Icons.lock_outline),

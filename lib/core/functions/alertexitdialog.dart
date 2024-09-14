@@ -7,6 +7,7 @@ import '../constant/colors.dart';
 
 Future<bool> alertExitApp() {
   Get.defaultDialog(
+      backgroundColor: AppColor.backgroundcolor,
       title: "تنبيه",
       titleStyle: const TextStyle(
           color: AppColor.primaryColor, fontWeight: FontWeight.bold),
@@ -19,7 +20,10 @@ Future<bool> alertExitApp() {
             onPressed: () {
               exit(0);
             },
-            child: const Text("تاكيد")),
+            child: const Text(
+              "تاكيد",
+              style: TextStyle(color: Colors.white),
+            )),
         ElevatedButton(
             style: ButtonStyle(
                 backgroundColor:
@@ -27,7 +31,10 @@ Future<bool> alertExitApp() {
             onPressed: () {
               Get.back();
             },
-            child: const Text("الغاء"))
+            child: const Text(
+              "الغاء",
+              style: TextStyle(color: Colors.white),
+            ))
       ]);
   return Future.value(true);
 }
