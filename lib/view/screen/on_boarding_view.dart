@@ -1,5 +1,6 @@
 import 'package:ecommerce/controller/on_boarding_controller.dart';
 import 'package:ecommerce/core/constant/colors.dart';
+import 'package:ecommerce/data/data_source/static/static.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -42,8 +43,11 @@ class OnBoardingView extends GetView<OnBoardingControllerImp> {
                 const SizedBox(
                   height: 16,
                 ),
-                const CustomTextButton(
-                  text: "Skip",
+                Visibility(
+                  visible: controller.currentPage != onBoardingList.length - 1,
+                  child: const CustomTextButton(
+                    text: "Skip",
+                  ),
                 )
               ],
             ))

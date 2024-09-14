@@ -9,7 +9,7 @@ class MyTranslation extends Translations {
         english: englishTitles,
       };
   Map<String, String> get arabicTitles => {
-        TitlesLanguage.chooseLanguage: "اختر اللغة",
+        "1": "اختر اللغة",
         "2": "اختر المنتجة",
         "3": "نحن لدينا 100 الف منتج  , اختر \n  منتجك  من  متجرنا",
         "4": "سهل وامن للشراء",
@@ -92,12 +92,4 @@ class MyTranslation extends Translations {
         "37": "congratulations",
         "38": "successfully registered"
       };
-}
-
-abstract class TitlesLanguage {
-  static const String chooseLanguage = "Choose Language";
-  static const String chooseProduct = "Choose Product";
-  static const String firstOnBoarding = "firstOnBoarding";
-  static const String secondOnBoarding = "firstOnBoarding";
-  static const String thirdOnBoarding = "firstOnBoarding";
 }
