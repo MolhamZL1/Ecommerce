@@ -9,6 +9,7 @@ abstract class OnBoardingController extends GetxController {
 }
 
 class OnBoardingControllerImp extends OnBoardingController {
+  MyService myservice = Get.find();
   late PageController pageController;
   int currentPage = 0;
   @override
@@ -26,6 +27,7 @@ class OnBoardingControllerImp extends OnBoardingController {
   @override
   next() {
     if (currentPage >= onBoardingList.length - 1) {
+      myservice.sharedpref.setString(key:"onBoarding",value:"skipped");
       Get.offAllNamed(AppRoutes.login);
     } else {
       currentPage++;
