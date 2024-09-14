@@ -1,4 +1,5 @@
 import 'package:ecommerce/core/constant/routes.dart';
+import 'package:ecommerce/core/middleware/middleware.dart';
 import 'package:ecommerce/view/screen/ChooseLanguageVieew.dart';
 import 'package:ecommerce/view/screen/auth/SuccessRegisterationview.dart';
 import 'package:ecommerce/view/screen/auth/VerifycodeEmailview.dart';
@@ -12,7 +13,10 @@ import 'package:ecommerce/view/screen/on_boarding_view.dart';
 import 'package:get/get.dart';
 
 List<GetPage<dynamic>>? routes = [
-  GetPage(name: "/", page: () => const ChooseLanguageVieew()),
+  GetPage(
+      name: "/",
+      page: () => const ChooseLanguageVieew(),
+      middlewares: [MyMiddleWare()]),
   GetPage(name: AppRoutes.login, page: () => const LoginView()),
   GetPage(name: AppRoutes.signUp, page: () => const SignUpView()),
   GetPage(

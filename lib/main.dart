@@ -1,7 +1,6 @@
 import 'package:ecommerce/core/localization/locale.dart';
 import 'package:ecommerce/core/localization/translation.dart';
 import 'package:ecommerce/core/services/services.dart';
-import 'package:ecommerce/view/screen/ChooseLanguageVieew.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -23,7 +22,6 @@ class Ecommerce extends StatelessWidget {
       translations: MyTranslation(),
       locale: controller.language,
       debugShowCheckedModeBanner: false,
-      home: const ChooseLanguageVieew(),
       theme: controller.themeApp,
       getPages: routes,
     );
