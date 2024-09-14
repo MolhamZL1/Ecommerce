@@ -1,4 +1,5 @@
 import 'package:ecommerce/core/constant/routes.dart';
+import 'package:ecommerce/core/services/services.dart';
 import 'package:ecommerce/data/data_source/static/static.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -6,10 +7,11 @@ import 'package:get/get.dart';
 abstract class OnBoardingController extends GetxController {
   next();
   onPageChanged(int pageIndex);
+  skip();
 }
 
 class OnBoardingControllerImp extends OnBoardingController {
-  MyService myservice = Get.find();
+  MyServices myservice = Get.find();
   late PageController pageController;
   int currentPage = 0;
   @override
@@ -25,9 +27,9 @@ class OnBoardingControllerImp extends OnBoardingController {
   }
 
   @override
-  next() {
+  next() async {
     if (currentPage >= onBoardingList.length - 1) {
-      myservice.sharedpref.setString(key:"onBoarding",value:"skipped");
+      await myservice.sharedPreferences.setString("onBoarding", "skipped");
       Get.offAllNamed(AppRoutes.login);
     } else {
       currentPage++;
@@ -40,5 +42,12 @@ class OnBoardingControllerImp extends OnBoardingController {
   onPageChanged(int pageIndex) {
     currentPage = pageIndex;
     update();
+  }
+
+  @override
+  skip() {
+    currentPage = onBoardingList.length - 1;
+    pageController.animateToPage(currentPage,
+        duration: const Duration(milliseconds: 500), curve: Curves.easeInOut);
   }
 }
