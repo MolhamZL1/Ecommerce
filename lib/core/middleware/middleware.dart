@@ -13,5 +13,6 @@ class MyMiddleWare extends GetMiddleware {
     if (myServices.sharedPreferences.getString("onBoarding") == "skipped") {
       return const RouteSettings(name: AppRoutes.login);
     }
+    return null;
   }
 }
