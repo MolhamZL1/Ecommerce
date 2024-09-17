@@ -1,3 +1,4 @@
+import 'package:ecommerce/controller/bindings/initial_bindings.dart';
 import 'package:ecommerce/core/localization/locale.dart';
 import 'package:ecommerce/core/localization/translation.dart';
 import 'package:ecommerce/core/services/services.dart';
@@ -23,6 +24,7 @@ class Ecommerce extends StatelessWidget {
       locale: controller.language,
       debugShowCheckedModeBanner: false,
       theme: controller.themeApp,
+      initialBinding: InitialBindings(),
       getPages: routes,
     );
   }

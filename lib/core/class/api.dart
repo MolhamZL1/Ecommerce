@@ -21,7 +21,7 @@ class Api {
         return const Left(StatusRequest.offlinefailure);
       }
     } catch (_) {
-      return const Left(StatusRequest.serverfailure);
+      return const Left(StatusRequest.serverException);
     }
   }
 }

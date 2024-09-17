@@ -1,11 +1,14 @@
+import 'package:ecommerce/controller/auth/signinController.dart';
+import 'package:ecommerce/controller/auth/signupController.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import 'CustomAuthButton.dart';
 import 'HaveAnAcountSection.dart';
 import 'HeadSignUpSection.dart';
 import 'TextFieldSignUpSection.dart';
 
-class SignUpViewBody extends StatelessWidget {
+class SignUpViewBody extends GetView<SignUpController> {
   const SignUpViewBody({super.key});
 
   @override
@@ -17,7 +20,7 @@ class SignUpViewBody extends StatelessWidget {
         const TextFieldSignUpSection(),
         CustomAuthButton(
           text: "Sign Up",
-          onPressed: () {},
+          onPressed: controller.signUp,
         ),
         const SizedBox(
           height: 20,

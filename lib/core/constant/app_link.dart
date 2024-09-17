@@ -1,13 +1,9 @@
-class AppLink {
-
-static const String server = "https://waelabohamza.com/ecommerce"; 
-// 
-static const String test = "$server/test.php";
+abstract class AppLink {
+  static const String server = "https://waelabohamza.com/ecommerce";
+//
+  static const String test = "$server/test.php";
 
 // ================================= Auth ========================== //
 
-static const String signUp = "$server/auth/signup.php";
-
-
-
+  static const String signUp = "$server/auth/signup.php";
 }
