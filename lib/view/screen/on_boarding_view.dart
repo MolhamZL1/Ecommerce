@@ -35,9 +35,7 @@ class OnBoardingView extends GetView<OnBoardingControllerImp> {
                   padding: const EdgeInsets.symmetric(horizontal: 32),
                   child: CustomElevatedButton(
                     text: "Continue",
-                    onPressed: () {
-                      controller.next();
-                    },
+                    onPressed: controller.next,
                   ),
                 ),
                 const SizedBox(
@@ -45,7 +43,8 @@ class OnBoardingView extends GetView<OnBoardingControllerImp> {
                 ),
                 Visibility(
                   visible: controller.currentPage != onBoardingList.length - 1,
-                  child: const CustomTextButton(
+                  child: CustomTextButton(
+                    onTap: controller.skip,
                     text: "Skip",
                   ),
                 )

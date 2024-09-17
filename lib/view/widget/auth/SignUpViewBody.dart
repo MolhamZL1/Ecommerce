@@ -1,4 +1,3 @@
-import 'package:ecommerce/controller/auth/signinController.dart';
 import 'package:ecommerce/controller/auth/signupController.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -8,7 +7,7 @@ import 'HaveAnAcountSection.dart';
 import 'HeadSignUpSection.dart';
 import 'TextFieldSignUpSection.dart';
 
-class SignUpViewBody extends GetView<SignUpController> {
+class SignUpViewBody extends GetView<SignUpControllerImp> {
   const SignUpViewBody({super.key});
 
   @override

@@ -10,9 +10,9 @@ class SignUpData {
       String phoneNumber) async {
     var result = await _api.postData(AppLink.signUp, {
       "username": username,
-      "email": email,
       "password": password,
-      "phoneNumber": phoneNumber
+      "email": email,
+      "phone": phoneNumber,
     });
     return result.fold((l) => l, (r) => r);
   }

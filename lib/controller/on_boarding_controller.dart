@@ -7,6 +7,7 @@ import 'package:get/get.dart';
 abstract class OnBoardingController extends GetxController {
   next();
   onPageChanged(int pageIndex);
+  skip();
 }
 
 class OnBoardingControllerImp extends OnBoardingController {
@@ -41,5 +42,12 @@ class OnBoardingControllerImp extends OnBoardingController {
   onPageChanged(int pageIndex) {
     currentPage = pageIndex;
     update();
+  }
+
+  @override
+  skip() {
+    currentPage = onBoardingList.length - 1;
+    pageController.animateToPage(currentPage,
+        duration: const Duration(milliseconds: 500), curve: Curves.easeInOut);
   }
 }
