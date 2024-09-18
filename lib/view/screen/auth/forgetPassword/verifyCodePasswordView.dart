@@ -1,25 +1,26 @@
-import 'package:ecommerce/controller/auth/VerficationcodeEmailcontrollaer.dart';
+import 'package:ecommerce/controller/auth/verficationcodePasswordcontrollaer.dart';
 import 'package:ecommerce/core/constant/colors.dart';
 import 'package:ecommerce/core/widgets/handling_data_view.dart';
 import 'package:ecommerce/view/widget/auth/AuthViewAppBar.dart';
-import 'package:ecommerce/view/widget/auth/VerifycodeEmailviewBody.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class Verifycodeemailview extends StatelessWidget {
-  const Verifycodeemailview({super.key});
+import '../../../widget/auth/VerifycodePasswordviewBody.dart';
+
+class VerifycodePasswordview extends StatelessWidget {
+  const VerifycodePasswordview({super.key});
 
   @override
   Widget build(BuildContext context) {
-    Get.put(VerficationcodeEmailcontrollaerImp());
+    Get.put(VerficationcodePasswordcontrollaerImp());
     return Scaffold(
       appBar: const AuthViewAppBar(text: "OTP Verification"),
       backgroundColor: AppColor.backgroundcolor,
-      body:
-          GetBuilder<VerficationcodeEmailcontrollaerImp>(builder: (controller) {
+      body: GetBuilder<VerficationcodePasswordcontrollaerImp>(
+          builder: (controller) {
         return HandlingDataView(
             statusRequest: controller.statusRequest,
-            child: const VerifycodeEmailviewBody());
+            child: const VerifycodePasswordviewBody());
       }),
     );
   }

@@ -5,9 +5,8 @@ import 'package:ecommerce/core/functions/handlingdata.dart';
 import 'package:ecommerce/data/data_source/reomte/signUp.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:lottie/lottie.dart';
 
-import '../../core/constant/image_assets.dart';
+import '../../core/functions/handleErrors.dart';
 
 abstract class SignUpController extends GetxController {
   signUp();
@@ -31,12 +30,10 @@ class SignUpControllerImp extends SignUpController {
       var response = await _signUpData.signUp(
           userName.text, email.text, password.text, phoneNumber.text);
       statusRequest = handlingData(response);
-      print(statusRequest);
-
       if (statusRequest == StatusRequest.success) {
-        print("========================success");
         if (response["status"] == "success") {
-          Get.offNamed(AppRoutes.verifycodeEmail);
+          Get.offNamed(AppRoutes.verifycodeEmail,
+              arguments: {"email": email.text});
         } else {
           Get.defaultDialog(
               backgroundColor: AppColor.backgroundcolor,
@@ -45,30 +42,7 @@ class SignUpControllerImp extends SignUpController {
           statusRequest = StatusRequest.failure;
         }
       } else {
-        statusRequest == StatusRequest.offlinefailure
-            ? Get.defaultDialog(
-                backgroundColor: AppColor.backgroundcolor,
-                title: "Warning",
-                content: Center(
-                  child: Lottie.asset(AppImageAsset.offline,
-                      width: 250, height: 250),
-                ))
-            : statusRequest == StatusRequest.serverfailure ||
-                    statusRequest == StatusRequest.serverException
-                ? Get.defaultDialog(
-                    backgroundColor: AppColor.backgroundcolor,
-                    title: "Warning",
-                    content: Center(
-                      child: Lottie.asset(AppImageAsset.server,
-                          width: 250, height: 250),
-                    ))
-                : Get.defaultDialog(
-                    backgroundColor: AppColor.backgroundcolor,
-                    title: "Warning",
-                    content: Center(
-                      child: Lottie.asset(AppImageAsset.offline,
-                          width: 250, height: 250),
-                    ));
+        handleErrors(statusRequest!);
       }
       update();
     } else {}

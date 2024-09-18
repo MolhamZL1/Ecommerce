@@ -1,10 +1,11 @@
 import 'package:ecommerce/controller/auth/forgetpasswordController.dart';
 import 'package:ecommerce/core/constant/colors.dart';
+import 'package:ecommerce/core/widgets/handling_data_view.dart';
 import 'package:ecommerce/view/widget/auth/AuthViewAppBar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../widget/auth/ForgetPasswordViewBody.dart';
+import '../../../widget/auth/ForgetPasswordViewBody.dart';
 
 class ForgetPasswordView extends StatelessWidget {
   const ForgetPasswordView({super.key});
@@ -12,10 +13,14 @@ class ForgetPasswordView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Get.put(ForgetpasswordcontrollerImp());
-    return const Scaffold(
+    return Scaffold(
       backgroundColor: AppColor.backgroundcolor,
-      appBar: AuthViewAppBar(text: "Forget Password"),
-      body: ForgetPasswordViewBody(),
+      appBar: const AuthViewAppBar(text: "Forget Password"),
+      body: GetBuilder<ForgetpasswordcontrollerImp>(builder: (controller) {
+        return HandlingDataView(
+            statusRequest: controller.statusRequest,
+            child: const ForgetPasswordViewBody());
+      }),
     );
   }
 }

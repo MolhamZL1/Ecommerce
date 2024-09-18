@@ -1,5 +1,6 @@
 import 'package:ecommerce/controller/auth/signinController.dart';
 import 'package:ecommerce/core/constant/colors.dart';
+import 'package:ecommerce/core/widgets/handling_data_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -12,13 +13,17 @@ class LoginView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Get.put(SignInControllerImp());
-    return const SafeArea(
+    return SafeArea(
       child: Scaffold(
         backgroundColor: AppColor.backgroundcolor,
-        appBar: AuthViewAppBar(
+        appBar: const AuthViewAppBar(
           text: "Sign In",
         ),
-        body: LoginViewBody(),
+        body: GetBuilder<SignInControllerImp>(builder: (controller) {
+          return HandlingDataView(
+              statusRequest: controller.statusRequest,
+              child: const LoginViewBody());
+        }),
       ),
     );
   }

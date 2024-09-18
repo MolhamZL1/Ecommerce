@@ -26,7 +26,7 @@ class VerifycodeEmailviewBody
             showFieldAsBox: true,
 
             onSubmit: (String verificationCode) {
-              controller.onComplete();
+              controller.onComplete(verificationCode);
             }, // end onSubmit
           ),
           const Spacer(),
