@@ -2,10 +2,10 @@ import 'package:ecommerce/core/constant/routes.dart';
 import 'package:ecommerce/data/data_source/reomte/verfy_Code_password.dart';
 import 'package:get/get.dart';
 
-import '../../core/class/status_request.dart';
-import '../../core/constant/colors.dart';
-import '../../core/functions/handleErrors.dart';
-import '../../core/functions/handlingdata.dart';
+import '../../../core/class/status_request.dart';
+import '../../../core/constant/colors.dart';
+import '../../../core/functions/handleErrors.dart';
+import '../../../core/functions/handlingdata.dart';
 
 abstract class VerficationcodePasswordcontrollaer extends GetxController {
   onComplete(String code);
@@ -31,7 +31,9 @@ class VerficationcodePasswordcontrollaerImp
     statusRequest = handlingData(response);
     if (statusRequest == StatusRequest.success) {
       if (response["status"] == "success") {
-        Get.offNamed(AppRoutes.resetepassword);
+        Get.offNamed(AppRoutes.resetepassword, arguments: {
+          "email": email,
+        });
       } else {
         Get.defaultDialog(
             backgroundColor: AppColor.backgroundcolor,

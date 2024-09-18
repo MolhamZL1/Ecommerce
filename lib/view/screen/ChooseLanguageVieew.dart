@@ -3,7 +3,7 @@ import 'package:ecommerce/core/localization/locale.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../widget/auth/ChooseLanguageVieewBody.dart';
+import '../widget/ChooseLanguageVieewBody.dart';
 
 class ChooseLanguageVieew extends GetView<LocaleController> {
   const ChooseLanguageVieew({super.key});

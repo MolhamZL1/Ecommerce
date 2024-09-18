@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../core/constant/colors.dart';
-import '../../../core/constant/routes.dart';
-import 'CustomAuthButton.dart';
-import 'CustomBodyTextAuth.dart';
-import 'CustomTextTitleAuth.dart';
+import '../../../../core/constant/colors.dart';
+import '../../../../core/constant/routes.dart';
+import '../CustomAuthButton.dart';
+import '../CustomBodyTextAuth.dart';
+import '../CustomTextTitleAuth.dart';
 
 class SuccessEmailviewBody extends StatelessWidget {
   const SuccessEmailviewBody({

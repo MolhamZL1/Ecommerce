@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'CustomBodyTextAuth.dart';
-import 'CustomTextTitleAuth.dart';
+import '../CustomBodyTextAuth.dart';
+import '../CustomTextTitleAuth.dart';
 
 class HeadForgetPasswordSection extends StatelessWidget {
   const HeadForgetPasswordSection({

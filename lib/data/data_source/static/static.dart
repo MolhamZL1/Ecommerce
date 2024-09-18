@@ -2,7 +2,7 @@ import 'package:ecommerce/data/model/on_boarding_model.dart';
 
 import '../../../core/constant/image_assets.dart';
 
-List<OnBoardingModel> onBoardingList = const [
+List<OnBoardingModel> onBoardingList = [
   OnBoardingModel(
       title: "Find Favorite Items",
       body: "Find your favorite products that you want to \n buy easily",

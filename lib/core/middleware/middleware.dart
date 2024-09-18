@@ -10,6 +10,9 @@ class MyMiddleWare extends GetMiddleware {
   int? get priority => 1;
   @override
   RouteSettings? redirect(String? route) {
+    if (myServices.sharedPreferences.getString("login") == "skipped") {
+      return const RouteSettings(name: AppRoutes.homeView);
+    }
     if (myServices.sharedPreferences.getString("onBoarding") == "skipped") {
       return const RouteSettings(name: AppRoutes.login);
     }

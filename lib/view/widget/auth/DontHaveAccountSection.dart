@@ -2,8 +2,8 @@ import 'package:ecommerce/controller/auth/signinController.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../core/constant/colors.dart';
-import '../../core/shared/CustomTextButton.dart';
+import '../../../core/constant/colors.dart';
+import '../../../core/shared/CustomTextButton.dart';
 
 class DontHaveAccountSection extends GetView<SignInControllerImp> {
   const DontHaveAccountSection({

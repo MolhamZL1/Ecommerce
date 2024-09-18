@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 
-import 'CustomBodyTextAuth.dart';
-import 'CustomTextTitleAuth.dart';
+import '../CustomBodyTextAuth.dart';
+import '../CustomTextTitleAuth.dart';
 
 class HeadVerficationSection extends StatelessWidget {
   const HeadVerficationSection({

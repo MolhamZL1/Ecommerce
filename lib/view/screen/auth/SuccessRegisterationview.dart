@@ -1,5 +1,5 @@
 import 'package:ecommerce/core/constant/colors.dart';
-import 'package:ecommerce/view/widget/auth/SuccessPasswordviewBody.dart';
+import 'package:ecommerce/view/widget/auth/forgetPassword/SuccessPasswordviewBody.dart';
 import 'package:flutter/material.dart';
 
 import '../../widget/auth/AuthViewAppBar.dart';

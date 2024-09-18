@@ -3,10 +3,10 @@ import 'package:ecommerce/data/data_source/reomte/resetepassword.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 
-import '../../core/class/status_request.dart';
-import '../../core/constant/colors.dart';
-import '../../core/functions/handleErrors.dart';
-import '../../core/functions/handlingdata.dart';
+import '../../../core/class/status_request.dart';
+import '../../../core/constant/colors.dart';
+import '../../../core/functions/handleErrors.dart';
+import '../../../core/functions/handlingdata.dart';
 
 abstract class Resetpasswordcontroller extends GetxController {
   save();

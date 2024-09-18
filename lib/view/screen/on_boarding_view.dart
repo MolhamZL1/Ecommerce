@@ -6,8 +6,8 @@ import 'package:get/get.dart';
 
 import '../../core/shared/CustomElevatedButton.dart';
 import '../../core/shared/CustomTextButton.dart';
-import '../widget/CustomDotControllerOnBoarding.dart';
-import '../widget/OnBoardingSlider.dart';
+import '../widget/onboarding/CustomDotControllerOnBoarding.dart';
+import '../widget/onboarding/OnBoardingSlider.dart';
 
 class OnBoardingView extends GetView<OnBoardingControllerImp> {
   const OnBoardingView({super.key});

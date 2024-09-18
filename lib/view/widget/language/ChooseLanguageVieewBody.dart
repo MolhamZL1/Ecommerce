@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../core/constant/image_assets.dart';
-import '../../../core/constant/routes.dart';
-import '../../../core/localization/locale.dart';
-import '../../../core/localization/translation.dart';
-import '../ChooseLanguageItem.dart';
+import '../../core/constant/image_assets.dart';
+import '../../core/constant/routes.dart';
+import '../../core/localization/locale.dart';
+import '../../core/localization/translation.dart';
+import 'language/ChooseLanguageItem.dart';
 
 class ChooseLanguageVieewBody extends GetView<LocaleController> {
   const ChooseLanguageVieewBody({

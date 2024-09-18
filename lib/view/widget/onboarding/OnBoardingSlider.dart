@@ -2,7 +2,7 @@ import 'package:ecommerce/controller/on_boarding_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../data/data_source/static/static.dart';
+import '../../../data/data_source/static/static.dart';
 import 'OnBoardingPageViewItem.dart';
 
 class OnBoardingSlider extends GetView<OnBoardingControllerImp> {

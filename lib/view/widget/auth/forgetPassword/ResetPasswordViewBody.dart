@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/simple/get_view.dart';
 
-import '../../../controller/auth/resetPasswordController.dart';
-import '../../../core/functions/validInput.dart';
-import 'CustomAuthButton.dart';
-import 'CustomAuthTextFormField.dart';
-import 'CustomBodyTextAuth.dart';
-import 'CustomTextTitleAuth.dart';
+import '../../../../controller/auth/forgetpassword/resetPasswordController.dart';
+import '../../../../core/functions/validInput.dart';
+import '../CustomAuthButton.dart';
+import '../CustomAuthTextFormField.dart';
+import '../CustomBodyTextAuth.dart';
+import '../CustomTextTitleAuth.dart';
 
 class ResetPasswordViewBody extends GetView<ResetpasswordcontrollerImp> {
   const ResetPasswordViewBody({

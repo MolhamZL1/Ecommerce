@@ -2,9 +2,9 @@ import 'package:ecommerce/core/functions/validInput.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/simple/get_view.dart';
 
-import '../../../controller/auth/forgetpasswordController.dart';
-import 'CustomAuthButton.dart';
-import 'CustomAuthTextFormField.dart';
+import '../../../../controller/auth/forgetpassword/forgetpasswordController.dart';
+import '../CustomAuthButton.dart';
+import '../CustomAuthTextFormField.dart';
 import 'HeadForgetPasswordSection.dart';
 
 class ForgetPasswordViewBody extends GetView<ForgetpasswordcontrollerImp> {

@@ -4,7 +4,7 @@ import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:get/get_state_manager/src/simple/get_view.dart';
 
 import '../../../core/constant/colors.dart';
-import 'HeadVerficationSection.dart';
+import 'forgetPassword/HeadVerficationSection.dart';
 
 class VerifycodeEmailviewBody
     extends GetView<VerficationcodeEmailcontrollaerImp> {

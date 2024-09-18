@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 
 import '../../../core/constant/colors.dart';
 import 'CustomAuthButton.dart';
-import '../DontHaveAccountSection.dart';
+import 'DontHaveAccountSection.dart';
 import 'HeadLoginSection.dart';
 import 'TextFieldsLoginSection.dart';
 
