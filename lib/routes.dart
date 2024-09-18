@@ -3,14 +3,16 @@ import 'package:ecommerce/core/middleware/middleware.dart';
 import 'package:ecommerce/view/screen/ChooseLanguageVieew.dart';
 import 'package:ecommerce/view/screen/auth/SuccessRegisterationview.dart';
 import 'package:ecommerce/view/screen/auth/VerifycodeEmailview.dart';
-import 'package:ecommerce/view/screen/auth/forgetPasswordView.dart';
+import 'package:ecommerce/view/screen/auth/forgetPassword/forgetPasswordView.dart';
 import 'package:ecommerce/view/screen/auth/logIn_view.dart';
-import 'package:ecommerce/view/screen/auth/resetePasswordView.dart';
+import 'package:ecommerce/view/screen/auth/forgetPassword/resetePasswordView.dart';
 import 'package:ecommerce/view/screen/auth/signUpView.dart';
-import 'package:ecommerce/view/screen/auth/SuccessResetePasswordview.dart';
-import 'package:ecommerce/view/screen/auth/verifyCodePasswordView.dart';
+import 'package:ecommerce/view/screen/auth/forgetPassword/SuccessResetePasswordview.dart';
+import 'package:ecommerce/view/screen/auth/forgetPassword/verifyCodePasswordView.dart';
 import 'package:ecommerce/view/screen/on_boarding_view.dart';
 import 'package:get/get.dart';
+
+import 'view/screen/home_view.dart';
 
 List<GetPage<dynamic>>? routes = [
   GetPage(
@@ -35,4 +37,5 @@ List<GetPage<dynamic>>? routes = [
   GetPage(
       name: AppRoutes.verifycodeEmail, page: () => const Verifycodeemailview()),
   GetPage(name: AppRoutes.onBoardingView, page: () => const OnBoardingView()),
+  GetPage(name: AppRoutes.homeView, page: () => const HomeView()),
 ];

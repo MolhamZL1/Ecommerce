@@ -1,8 +1,8 @@
 import 'package:ecommerce/core/constant/colors.dart';
 import 'package:flutter/material.dart';
 
-import '../../widget/auth/AuthViewAppBar.dart';
-import '../../widget/auth/SuccessauthviewBody.dart';
+import '../../../widget/auth/AuthViewAppBar.dart';
+import '../../../widget/auth/SuccessauthviewBody.dart';
 
 class SuccessResetePasswordview extends StatelessWidget {
   const SuccessResetePasswordview({super.key});

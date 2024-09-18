@@ -29,7 +29,7 @@ class OnBoardingControllerImp extends OnBoardingController {
   @override
   next() async {
     if (currentPage >= onBoardingList.length - 1) {
-      await myservice.sharedPreferences.setString("onBoarding", "skipped");
+      myservice.sharedPreferences.setString("onBoarding", "skipped");
       Get.offAllNamed(AppRoutes.login);
     } else {
       currentPage++;

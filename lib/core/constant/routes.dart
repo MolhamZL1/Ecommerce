@@ -12,4 +12,6 @@ class AppRoutes {
   static const String onBoardingView = "/onBoardingView";
   //Choose language
   static const String chooseLanguageVieew = "/ChooseLanguageVieew";
+  //home
+  static const String homeView = "/homeView";
 }
