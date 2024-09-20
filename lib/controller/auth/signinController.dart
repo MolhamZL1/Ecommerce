@@ -1,5 +1,6 @@
 import 'package:ecommerce/core/constant/routes.dart';
-import 'package:ecommerce/data/data_source/reomte/login.dart';
+import 'package:ecommerce/core/shared/CustomTextButton.dart';
+import 'package:ecommerce/data/data_source/reomte/auth/login.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -53,17 +54,26 @@ class SignInControllerImp extends SignInController {
       var response = await _loginData.login(email.text, password.text);
       statusRequest = handlingData(response);
       if (statusRequest == StatusRequest.success) {
-        if (response["status"] == "success") {
-          Get.offAllNamed(
-            AppRoutes.homeView,
-          );
-        } else {
-          Get.defaultDialog(
-              backgroundColor: AppColor.backgroundcolor,
-              title: "Warning",
-              middleText: "Email or Password is incorrect");
-          statusRequest = StatusRequest.failure;
-        }
+        Get.offAllNamed(AppRoutes.homeView);
+      } else if (statusRequest == StatusRequest.failure) {
+        Get.defaultDialog(
+          backgroundColor: AppColor.backgroundcolor,
+          title: "Warning",
+          middleText: "Email Or password is incorrect",
+        );
+      } else if (statusRequest == StatusRequest.serverfailure) {
+        Get.defaultDialog(
+            backgroundColor: AppColor.backgroundcolor,
+            title: "Warning",
+            middleText: "verify your Email First",
+            actions: [
+              CustomTextButton(
+                text: "Ok",
+                onTap: () {
+                  Get.back();
+                },
+              )
+            ]);
       } else {
         handleErrors(statusRequest!);
       }

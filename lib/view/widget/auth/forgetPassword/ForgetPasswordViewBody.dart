@@ -16,12 +16,15 @@ class ForgetPasswordViewBody extends GetView<ForgetpasswordcontrollerImp> {
       padding: const EdgeInsets.symmetric(horizontal: 32),
       children: [
         const HeadForgetPasswordSection(),
-        CustomAuthTextFormField(
-          controller: controller.email,
-          hintText: "Enter Your Email",
-          labelText: "Email",
-          validator: (val) => validInput(val!, 5, 30, "email"),
-          iconData: Icons.email_outlined,
+        Form(
+          key: controller.formState,
+          child: CustomAuthTextFormField(
+            controller: controller.email,
+            hintText: "Enter Your Email",
+            labelText: "Email",
+            validator: (val) => validInput(val!, 5, 30, "email"),
+            iconData: Icons.email_outlined,
+          ),
         ),
         const SizedBox(
           height: 20,

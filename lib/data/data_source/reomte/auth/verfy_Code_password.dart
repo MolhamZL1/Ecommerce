@@ -1,16 +1,16 @@
 import 'package:ecommerce/core/constant/app_link.dart';
 
-import '../../../core/class/api.dart';
+import '../../../../core/class/api.dart';
 
-class VerfyCodeSignUpData {
+class VerfyCodePasswordData {
   final Api _api;
 
-  VerfyCodeSignUpData(this._api);
+  VerfyCodePasswordData(this._api);
   verifyCode(
     String email,
     String code,
   ) async {
-    var result = await _api.postData(AppLink.verifycodesignup, {
+    var result = await _api.postData(AppLink.verifycodepassword, {
       "email": email,
       "verifycode": code,
     });

@@ -1,5 +1,5 @@
 import 'package:ecommerce/core/constant/routes.dart';
-import 'package:ecommerce/data/data_source/reomte/verfycodeSignUp.dart';
+import 'package:ecommerce/data/data_source/reomte/auth/verfycodeSignUp.dart';
 import 'package:get/get.dart';
 
 import '../../core/class/status_request.dart';

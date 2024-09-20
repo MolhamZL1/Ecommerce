@@ -1,5 +1,5 @@
 import 'package:ecommerce/core/constant/routes.dart';
-import 'package:ecommerce/data/data_source/reomte/resetepassword.dart';
+import 'package:ecommerce/data/data_source/reomte/auth/resetepassword.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 

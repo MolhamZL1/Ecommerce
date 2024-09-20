@@ -23,11 +23,5 @@ void handleErrors(StatusRequest statusRequest) {
                 child:
                     Lottie.asset(AppImageAsset.server, width: 250, height: 250),
               ))
-          : Get.defaultDialog(
-              backgroundColor: AppColor.backgroundcolor,
-              title: "Warning",
-              content: Center(
-                child: Lottie.asset(AppImageAsset.offline,
-                    width: 250, height: 250),
-              ));
+          : null;
 }

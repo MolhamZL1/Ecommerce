@@ -2,11 +2,13 @@ import 'package:ecommerce/core/class/status_request.dart';
 import 'package:ecommerce/core/constant/colors.dart';
 import 'package:ecommerce/core/constant/routes.dart';
 import 'package:ecommerce/core/functions/handlingdata.dart';
-import 'package:ecommerce/data/data_source/reomte/signUp.dart';
+import 'package:ecommerce/core/shared/CustomTextButton.dart';
+import 'package:ecommerce/view/widget/auth/CustomAuthButton.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../core/functions/handleErrors.dart';
+import '../../data/data_source/reomte/auth/signUp.dart';
 
 abstract class SignUpController extends GetxController {
   signUp();
@@ -31,16 +33,31 @@ class SignUpControllerImp extends SignUpController {
           userName.text, email.text, password.text, phoneNumber.text);
       statusRequest = handlingData(response);
       if (statusRequest == StatusRequest.success) {
-        if (response["status"] == "success") {
-          Get.offNamed(AppRoutes.verifycodeEmail,
-              arguments: {"email": email.text});
-        } else {
-          Get.defaultDialog(
-              backgroundColor: AppColor.backgroundcolor,
-              title: "Warning",
-              middleText: "Phone Number Or Email already exist");
-          statusRequest = StatusRequest.failure;
-        }
+        Get.defaultDialog(
+            backgroundColor: AppColor.backgroundcolor,
+            title: "verification",
+            middleText:
+                "we sent you a verfication link to your email \n verify then login",
+            actions: [
+              CustomAuthButton(
+                text: "Go to Login",
+                onPressed: () {
+                  Get.offAllNamed(AppRoutes.login);
+                },
+              ),
+              CustomTextButton(
+                text: "Cancle",
+                onTap: () {
+                  Get.back();
+                },
+              )
+            ]);
+      } else if (statusRequest == StatusRequest.failure) {
+        Get.defaultDialog(
+          backgroundColor: AppColor.backgroundcolor,
+          title: "Warning",
+          middleText: "Email is already in use Or password is weak",
+        );
       } else {
         handleErrors(statusRequest!);
       }

@@ -37,7 +37,7 @@ class LoginViewBody extends GetView<SignInControllerImp> {
           ),
           CustomAuthButton(
             text: "Sign In",
-            onPressed: () {},
+            onPressed: controller.signin,
           ),
           const SizedBox(
             height: 20,

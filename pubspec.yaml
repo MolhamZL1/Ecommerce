@@ -30,11 +30,12 @@ environment:
 dependencies:
   auto_animated: ^3.2.0
   badges: ^3.1.2
-  cloud_firestore: ^5.4.0
+  cloud_firestore: ^5.4.2
   cupertino_icons: ^1.0.8
   dartz: ^0.10.1
   device_preview: ^1.2.0
   dropdown_search: ^5.0.6
+  firebase_auth: ^5.3.0
   firebase_core: ^3.4.0
   firebase_messaging: ^15.1.0
   flutter:

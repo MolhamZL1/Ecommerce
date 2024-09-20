@@ -1,6 +1,6 @@
 import 'package:ecommerce/core/constant/app_link.dart';
 
-import '../../../core/class/api.dart';
+import '../../../../core/class/api.dart';
 
 class ResetePasswordData {
   final Api _api;
